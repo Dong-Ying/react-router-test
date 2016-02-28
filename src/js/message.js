@@ -5,8 +5,7 @@ module.exports = React.createClass({
     render() {
         return (
             <div>
-                <h2>Inbox</h2>
-                {this.props.children}
+                This is the detailed info about message {this.props.params.id}.
             </div>
         )
     }
