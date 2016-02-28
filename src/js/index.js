@@ -8,6 +8,7 @@ const About = require('./about');
 const Inbox = require('./inbox');
 const Message = require('./message');
 const InboxStats = require('./inbox-stats');
+const NoMatch = require('./no-match');
 
 document.addEventListener('DOMContentLoaded', function () {
     render(
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <Route path="/messages/:id" component={Message}/>
                         <Redirect from="messages/:id" to="/messages/:id"/>
                     </Route>
+                    <Route path="*" component={NoMatch}/>
                 </Route>
             </Router>
         ),
