@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory, Redirect } from 'react-router'
 
 const App = require('./app');
 const Home = require('./home');
@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <Route path="inbox" component={Inbox}>
                         <IndexRoute component={InboxStats}/>
                         <Route path="/messages/:id" component={Message}/>
+                        <Redirect from="messages/:id" to="/messages/:id"/>
                     </Route>
                 </Route>
             </Router>
