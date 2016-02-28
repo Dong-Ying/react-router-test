@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <Route path="about" component={About}/>
                     <Route path="inbox" component={Inbox}>
                         <IndexRoute component={InboxStats}/>
-                        <Route path="messages/:id" component={Message}/>
+                        <Route path="/messages/:id" component={Message}/>
                     </Route>
                 </Route>
             </Router>
